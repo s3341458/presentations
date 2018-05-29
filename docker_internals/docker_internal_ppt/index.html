@@ -15,36 +15,79 @@
 </head>
 <body class='light'>
   <div><p>Docker Internals</p>
+<ul>
+<li>Why it is just a illusion?</li>
+</ul>
 </div>
 <div><p>Main Points</p>
 <ul>
-<li>namespace</li>
-<li>overlay file system</li>
+<li>Namespace</li>
+<li>Overlay file system</li>
 </ul>
 </div>
 <div><p>Uncovered but related</p>
 <ul>
-<li>cgroups</li>
-<li>linux virtual networks</li>
+<li>Cgroups</li>
+<li>Linux virtual networks</li>
 </ul>
 </div>
 <div><p>Namespace 1 (Question)</p>
 <ul>
-<li>How many programs are running on my machine.</li>
+<li>How many programs are running on my machine?</li>
+</ul>
+</div>
+<div><p>Namespace 1 (Answer)</p>
+<ul>
+<li>Only one! Operating System!</li>
 </ul>
 </div>
 <div><p>Namespace 2 (Process)</p>
 <ul>
-<li>program are binary code</li>
-<li>program load and run by OS as process</li>
-<li>normal commands and systemcalls</li>
+<li>Programs are binary code (eg 1)</li>
+<li>Programs load and run by OS as process</li>
+<li>Programs are commands and systemcalls</li>
 </ul>
 </div>
-<div><p>Namespace 3 (Virtual machine system call)</p>
+<div><p>Namespace 3 (Virtual machine system calls)</p>
 <ul>
-<li>virtual machine</li>
-<li>system call</li>
+<li>Virtual machine process can load and execute OS</li>
+<li>system calls -&gt; VM OS -&gt; VM process -&gt; OS</li>
 </ul>
+</div>
+<div><p>Namespace 4 (kernel magic)</p>
+<ul>
+<li>OS can directly tricks system calls</li>
+<li>System calls -&gt; OS (much simpler)</li>
+</ul>
+</div>
+<div><p>Namespace 5 (examples)</p>
+<ul>
+<li>Let&#39;s see examples (eg 2, eg 3)</li>
+</ul>
+</div>
+<div><p>Overlay filesystem 1 (Makes things portable)</p>
+<ul>
+<li>It is wrapper beyond native filesystem</li>
+<li>Can merge folders into one folder</li>
+</ul>
+</div>
+<div><p>Overlay filesystem 2 (examples)</p>
+<ul>
+<li>let&#39;s see examples (eg 4)</li>
+</ul>
+</div>
+<div><p>describe examples</p>
+<ul>
+<li>docker build</li>
+<li>docker run</li>
+<li>docker stop</li>
+<li>docker restart</li>
+<li>docker rm</li>
+<li>docker volume</li>
+<li>docker export</li>
+</ul>
+</div>
+<div><p>Q&amp;A</p>
 </div>
 </body>
 </html>

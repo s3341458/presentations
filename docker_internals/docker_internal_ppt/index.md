@@ -1,20 +1,20 @@
 Docker Internals
 
-* Why it is just a illusion.
+* Why it is just a illusion?
 
 ---
 
 Main Points
 
-* namespace
-* overlay file system
+* Namespace
+* Overlay file system
 
 ---
 
 Uncovered but related
 
-* cgroups
-* linux virtual networks
+* Cgroups
+* Linux virtual networks
 
 ---
 
@@ -24,25 +24,31 @@ Namespace 1 (Question)
 
 ---
 
+Namespace 1 (Answer)
+
+* Only one! Operating System!
+
+---
+
 Namespace 2 (Process)
 
-* program are binary code (eg 1)
-* program load and run by OS as process
-* program are commands and systemcalls
+* Programs are binary code (eg 1)
+* Programs load and run by OS as process
+* Programs are commands and systemcalls
 
 ---
 
-Namespace 3 (Virtual machine system call)
+Namespace 3 (Virtual machine system calls)
 
-* virtual machine execute OS
-* system call -> VM OS -> VM -> OS
+* Virtual machine process can load and execute OS
+* system calls -> VM OS -> VM process -> OS
 
 ---
 
-Namespace 4 (Namespace wrap systemcalls)
+Namespace 4 (kernel magic)
 
-* OS can directly tricks systemcalls
-* systemcalls -> OS (much simpler)
+* OS can directly tricks system calls
+* System calls -> OS (much simpler)
 
 ---
 
@@ -52,16 +58,15 @@ Namespace 5 (examples)
 
 ---
 
-Overlay filesystem 1
+Overlay filesystem 1 (Makes things portable)
 
 * It is wrapper beyond native filesystem
-* can merge folders in to fold
+* Can merge folders into one folder
 
 ---
 
-Overlay filesystem 2
+Overlay filesystem 2 (examples)
 * let's see examples (eg 4)
-
 
 ---
 describe examples
@@ -72,7 +77,6 @@ describe examples
 * docker rm
 * docker volume
 * docker export
-
 
 ---
 Q&A
