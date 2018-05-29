@@ -30,14 +30,14 @@ the material mostly comes from a 195 pages of a chinese book
 if you visit the repo, you can see I have done tiny little contribution
 to its codebase.
 
-I will use about 25 minutes to describe the core ideas of this book, and use
+I will use about 40 minutes to describe the core ideas of this book, and use
 5 minutes to summarize the my opinion. And leave about 10 min for Q&A
 
 I want to make the presentation more interactive, so please feel free to
 interrupt me.
 
 
-# Namespace [15min]
+# Namespace [20min]
 In order to understand namespace, firstly we should first start to get a basic
 understanding virtualization technology. I will do a over simplified discussion
 about this topic.
@@ -72,11 +72,9 @@ Those system calls are the only way that process can communicate with operating
 system. By system calls, process can ask OS do something for them, eg, "give me a file",
 "open up the camera" or "even put me in sleep". The thing need to notice is that
 from cpu point of view dealing with system calls takes much longer time than normal
-command (Context switching involved). All virtualization technologies are actually play
-tricks on those system calls.
+command (Context switching involved). All virtualization technologies are actually play tricks on those system calls.
 
-From the process point of view, it can only know which world it is in from the response
-of those system calls.
+From the process point of view, it can only know which world it is in from the response of those system calls.
 
 Normally, a virtual machine as a program is also a bunch of binary code which will
 be loaded to OS and executed as a "process". This process is a little bit special that
@@ -115,7 +113,7 @@ user namespace: used to isolate users that each process recongized. For example,
 Actually you can see namespace in linux pesudo file system.
 [eg3, check namespace]
 
-# Overlay filesystem https://wiki.archlinux.org/index.php/Overlay_filesystem
+# Overlay filesystem https://wiki.archlinux.org/index.php/Overlay_filesystem [10 min]
 Once we understand namespace understand overlay filesystem become much more straightforward.
 Like process, folder hierachies in kernel is just another data structure(tree liked), when a process want
 to find a file by give a file path, kernel will search the data structure whether the path folder exists and contains file with the
@@ -132,6 +130,7 @@ how images folder has been build. (docker build will be covered here)
 Now you are understand overlay fs.
 things become easy.
 
+# commands explains [5min]
 what docker run has done?
 start a new process with new namespace, and use merged folder as root folder the mount namespace of new process.
 Keep a record about what has happened.
@@ -151,4 +150,4 @@ starting a new process and put it in the namespace of previous container and the
 what docker export has done?
 copy the merged folder, and export it.
 
-# Q&A time.
+# Q&A time [10].
