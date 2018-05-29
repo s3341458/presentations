@@ -65,8 +65,9 @@ what is its state and what resource is using.
 A program that can run on the OS are formatted by two kinds commands, one is normal command
 which OS can directly taken without any conversion and can be throw to CPU directly.
 (mathmatic operaters, if else, for loop stuff are all belongs to this kind)
-The other kind of commands are system calls, which will trigger operating system to do some special works.
-(eg, file open function, sleep function is just a wrapper for those commands).
+The other kind of commands are system calls, which will trigger operating system to do some special works.  (eg, file open function, sleep function is just a wrapper for those commands).
+If you have not heard system calls you might heard of ABI, yes actually they are the same thing.
+
 Those system calls are the only way that process can communicate with operating
 system. By system calls, process can ask OS do something for them, eg, "give me a file",
 "open up the camera" or "even put me in sleep". The thing need to notice is that
@@ -149,6 +150,5 @@ starting a new process and put it in the namespace of previous container and the
 
 what docker export has done?
 copy the merged folder, and export it.
-
 
 # Q&A time.

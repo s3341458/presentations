@@ -1,0 +1,1 @@
+sudo mount -t overlay overlay -o lowerdir=./image_layer1:./image_layer2,upperdir=./container_layer,workdir=./work ./merged
